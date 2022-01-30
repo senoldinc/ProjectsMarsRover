@@ -1,5 +1,4 @@
 # ProjectsMarsRover
-Project mars rover is c# .net console application.
 ===========
 Mars Rovers
 ===========
