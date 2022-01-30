@@ -1,4 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using ProjectsMarsRover.Service;
+
 Console.WriteLine("Hello, World from to Mars");
 /*
  Code Review: Mars Rover
@@ -39,8 +41,31 @@ Expected Output:
  */
 
 //Lets get scneario
-// Plateu size : 5 5
+// Plateau size : 5 5
 // Rovers..
 //      Rover Position:  1 2 N
 //      Rover Command: LMLMLMLMM
+// -------------------------------
+//      Rover Position:  3 3 E
+//      Rover Command: MMRMMRMRRM
+
+var plateauSize = Console.ReadLine();
+
+var plateau = new Plataeu(plateauSize);
+
+var roverPosition = Console.ReadLine();
+var roverCommand = Console.ReadLine();
+
+var rover1 = new Rover(roverPosition, plateau);
+rover1.Move(roverCommand);
+
+roverPosition = Console.ReadLine();
+roverCommand = Console.ReadLine();
+
+var rover2 = new Rover(roverPosition, plateau);
+rover2.Move(roverCommand);
+//todo: maybe we can ask add more rover question ?
+
+Console.WriteLine(rover1.ToString());
+Console.WriteLine(rover2.ToString());
 
