@@ -54,7 +54,7 @@ var plateauSize = Console.ReadLine();
 if(string.IsNullOrEmpty(plateauSize))
 {
     Console.WriteLine("Please enter the plateau size. Like 5 5 format");
-    return;
+    plateauSize = Console.ReadLine();
 }
 
 var plateau = new Plataeu(plateauSize);
