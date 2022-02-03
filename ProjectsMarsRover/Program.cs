@@ -51,6 +51,12 @@ Expected Output:
 
 var plateauSize = Console.ReadLine();
 
+if(string.IsNullOrEmpty(plateauSize))
+{
+    Console.WriteLine("Please enter the plateau size. Like 5 5 format");
+    return;
+}
+
 var plateau = new Plataeu(plateauSize);
 
 var roverPosition = Console.ReadLine();
